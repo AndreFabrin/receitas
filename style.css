@@ -1,7 +1,11 @@
 * {
     margin: 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family:'Courier New', Courier, monospace;
     font-size: 18px;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -34,14 +38,33 @@ nav h2 {
 
 .nav-receitas {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
-    padding: 1rem;
+    margin: 1rem;
+    width: 90%;
 }
 
 .banner-receita {
     padding: 0.5rem;
+    filter: grayscale(1);
+}
+
+.nav-receitas:hover {
+    transform: scale(0.95);
+    transition-duration: 0.5s;
+}
+
+.banner-receita:hover {
+    filter: grayscale(0);
+    filter: brightness(1);
+    filter: contrast(1);
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+
+.banner-receita:not(:hover), .nav-receitas:not(:hover){
+    transition-duration: 0.5s;
 }
 
 .banner-img {
@@ -61,17 +84,29 @@ nav h2 {
 }
 
 .receitas {
-    margin: 0 3rem;
+    margin: 0rem 3rem 2rem 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    width: 100%;
+
 }
 
-.receitas {  
-
+.receita {  
+    background-color: lightsalmon;
+    padding: 2rem;
+    width: 80%;
+    transform: translate(-5%);
+    border-radius: 1rem;
+    border: 0.5rem solid brown;
 }
 
 .titulo-receita {
     text-align: center;
     font-size: 1.8rem;
-    margin: 3rem 0 1rem 0;
+    margin: 0 0 1rem 0;
 }
 
 .receita h3 {
@@ -93,9 +128,21 @@ nav h2 {
 }
 
 footer {
-
+    background-color: darkgoldenrod;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5rem;
+    margin-top: 3rem;
 }
 
-.infos {
-
+.infos ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 0.5rem 0 0 0;
+    gap: 2rem;
+    list-style: none;
 }
